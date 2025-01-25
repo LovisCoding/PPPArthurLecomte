@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPP S6 Arthur Lecomte</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 1em;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+        }
+
+        .content {
+            padding: 1em;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1em 0;
+            table-layout: fixed;
+            /* Force equal width for all columns */
+        }
+
+        table th,
+        table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            word-wrap: break-word;
+            /* Ensure text wraps within the cell */
+        }
+
+        table th {
+            background-color: #333;
+            color: white;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .image-container img {
+            max-width: 30%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        a.link {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        a.link:hover {
+            color: darkblue;
+        }
+
+        #map {
+            width: 100%;
+            height: 500px;
+        }
+
+        img.huechange {
+            filter: hue-rotate(120deg);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="#partie1">Partie 1</a>
+        <a href="#partie2">Partie 2</a>
+        <a href="#partie3">Partie 3</a>
+    </div>
+    <div class="content">
+        <section id="partie1">
+            <h2>Partie 1 : Continuer à se former après le BUT</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ecole (en Alternance)</th>
+                            <th>Ville</th>
+                            <th>Spécialité</th>
+                            <th>Débouchés</th>
+                            <th>Attendus</th>
+                            <th>Critères</th>
+                            <th>Pourquoi moi ?</th>
+                            <th>Procédures d'inscription</th>
+                            <th>Prix</th>
+                            <th>Taux d'emploi (à 6 mois)</th>
+                            <th>lien</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ULCO</td>
+                            <td>Calais</td>
+                            <td> Ingénierie du logiciel Libre (Gestion Projet / Web)</td>
+                            <td>Développeur d’applications multi-tiers et web
+                                Concepteur de systèmes multi-tiers
+                                Architecte logiciel
+                                Responsable d’infrastructures informatiques (systèmes et réseau)
+                                Développeur/concepteur de solutions embarquées
+                                Chef de projet (plus spécifiquement les projets de migration vers le libre)
+                                Chef de projet agile</td>
+                            <td>Programmation objet
+                                Programmation fonctionnelle
+                                Méthodologies de développement
+                                Développement web
+                                Bases de données
+                                Théorie des langages
+                                Réseaux
+                                Administration des systèmes
+                                Intelligence artificielle (IA)
+                                Analyse numérique
+                                Systèmes linéaires
+                                Probabilités et statistiques
+                                Niveau avancé en anglais</td>
+                            <td>
+                                Projet professionnel
+                                Expériences
+                                Motivation
+                                Résultats</td>
+                            <td>Appuyer sur mon alternance avec lettre de recommandation du tuteur, Famille sur Calais,
+                                projet à l'IUT</td>
+                            <td>Dossier + entretien</td>
+                            <td>243</td>
+                            <td>0.87</td>
+                            <td><a class="link"
+                                    href="https://www.monmaster.gouv.fr/master/universite-du-littoral/informatique-22?q=Informatique&modality=Alternance%20-%20Apprentissage&position=3&layout=1"
+                                    target="_blank">https://www.monmaster.gouv.fr/master/universite-du-littoral/informatique-22?q=Informatique&modality=Alternance%20-%20Apprentissage&position=3&layout=1</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>UT</td>
+                            <td>Toulouse</td>
+                            <td>SDL Science du logiciel (Gestion de projet / web)</td>
+                            <td>Activités informatiques (génie logiciel, exploitation, maintenance, sécurité)</td>
+                            <td>Programmation Java avancée (généricité, exceptions, bibliothèque de collections).
+
+                                Modélisation/conception objet.
+
+                                Méthodes de développement.
+
+                                Bases théoriques (algèbre, logique, automates, théorie des langages, modèles de
+                                programmation, vérification, complexité).</td>
+                            <td>Les notes obtenues sur les trois années de Licence
+
+                                Pertinence du projet de formation détaillé dans la lettre de motivation
+
+                                Les expériences passées : projets, stages
+
+                                Des lettres de recommandations éventuelles</td>
+                            <td>Alternance, Java, déjà de l'expérience en architecture micro-services</td>
+                            <td>Dossier</td>
+                            <td>243</td>
+                            <td>0.63</td>
+                            <td><a class="link"
+                                    href="https://www.monmaster.gouv.fr/master/universite-toulouse-iii/informatique-24?q=Informatique&modality=Alternance%20-%20Apprentissage&position=11&layout=1 "
+                                    target="_blank">https://www.monmaster.gouv.fr/master/universite-toulouse-iii/informatique-24?q=Informatique&modality=Alternance%20-%20Apprentissage&position=11&layout=1
+                                </a></td>
+                        </tr>
+                        <tr>
+                            <td>ULH</td>
+                            <td>Le Havre</td>
+                            <td>Ingénierie du WEB (Web / IA)</td>
+                            <td>Architecte WEB,
+                                Architecte de données Informatiques,
+                                Architecte système et réseaux,
+                                Chef de projet internet,
+                                Data scientist,
+                                Ingénieur d’étude, ingénieur de développement,
+                                Chef de projet informatique, architecte informatique répartie,</td>
+                            <td>Licence informatique générale fortement conseillée
+
+                                Maîtriser le langage de programmation Java
+
+                                Maîtriser les fondamentaux des bases de données
+
+                                Maîtriser les fondamentaux du WEB
+
+                                Maîtriser les fondamentaux de la théorie des langages
+
+                                Maîtriser les fondamentaux du système d’exploitation Linux
+
+                                Avoir un projet professionnel en adéquation avec l'offre de formation du Master
+
+                                Avoir un niveau correct en anglais</td>
+                            <td>les mentions de licence conseillées
+
+                                la maîtrise de certains savoirs ou certaines compétences
+
+                                les notes obtenues dans les années précédentes
+                            </td>
+                            <td>IUT du Havre, Alternance en Web, assisté à la présentation, possibilité de continuer
+                                avec eux</td>
+                            <td>Dossier</td>
+                            <td>243</td>
+                            <td>0.647</td>
+                            <td><a class="link"
+                                    href="https://www.monmaster.gouv.fr/master/universite-du-havre/informatique-36?q=Informatique&modality=Alternance%20-%20Apprentissage&address%5B0%5D%5B0%5D=normandie&position=0&layout=1 "
+                                    target="_blank">https://www.monmaster.gouv.fr/master/universite-du-havre/informatique-36?q=Informatique&modality=Alternance%20-%20Apprentissage&address%5B0%5D%5B0%5D=normandie&position=0&layout=1
+                                </a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section id="partie2">
+            <h2>Partie 2 : Le marché de l’emploi
+                ouvert à Toulouse</h2>
+            <div class="image-container">
+                <img src="infographie.png" alt="Infographie">
+            </div>
+        </section>
+        <section id="partie3">
+            <h2> Partie 3: Les Organisations susceptibles d'être embauchantes</h2>
+            <div id="map"></div>
+        </section>
+    </div>
+    <footer style="background-color: #f8f9fa; padding: 20px; text-align: center; border-top: 1px solid #e9ecef;">
+        <p style="margin: 0; font-size: 14px; color: #6c757d;">
+            © 2025 Arthur Lecomte PPP-S6. All rights reserved.
+        </p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Vérifier si L est défini
+            if (typeof L === 'undefined') {
+                console.error("Leaflet library is not loaded.");
+                return;
+            }
+
+            // Initialisation de la carte
+            var map = L.map('map').setView([43.6045, 1.444], 11.5); // Centre sur Toulouse
+
+            // Ajouter des tuiles OpenStreetMap
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+            }).addTo(map);
+
+            // Ajouter des marqueurs avec des popups
+            var points = [
+                // Esn
+                {
+                    coords: [43.6332677, 1.3787502],
+                    info: "<b>ESN: Altimer</b><br>10-19 employés,<br/>Maintenance / Support"
+                },
+                {
+                    coords: [43.6142888, 1.4331606],
+                    info: "<b>ESN: Apside</b><br>3000 employés,<br/>Développement / Infra"
+                },
+                {
+                    coords: [43.5719106, 1.3836423],
+                    info: "<b>ESN: Inside Group</b><br>250 employés,<br/>Développement / Infra"
+                },
+                {
+                    coords: [43.5688741, 1.3907263],
+                    info: "<b>ESN: CIAG</b><br>20 employés,<br/>Développement / Infra"
+                },
+                {
+                    coords: [43.5844133, 1.4946128],
+                    info: "<b>ESN: Inforsud - Occitanie</b><br>65 employés,<br/>Développement / Infra"
+                },
+                {
+                    coords: [43.6107539, 1.434551],
+                    info: "<b>ESN: Solutec</b><br>1500 employés,<br/>Développement / Infra"
+                },
+                {
+                    coords: [43.6357883, 1.4957117],
+                    info: "<b>ESN: CELAD</b><br>1500 employés,<br/>Développement / Infra"
+                }
+            ];
+
+            var pointsDSI = [
+                // DSI
+                {
+                    coords: [43.6357883, 1.4957117],
+                    info: "<b>DSI: Airbus Operations</b><br>10,000+ employés,<br/>Développement de systèmes aéronautiques"
+                },
+                {
+                    coords: [43.6367, 1.3670],
+                    info: "<b>DSI: Airbus Operations</b><br>10,000+ employés,<br/>Développement de systèmes aéronautiques"
+                },
+                {
+                    coords: [43.5675, 1.4014],
+                    info: "<b>DSI: Thales Alenia Space</b><br>2,700 employés,<br/>Conception de satellites avancés"
+                },
+                {
+                    coords: [43.5786, 1.4090],
+                    info: "<b>DSI: Capgemini Technology Services</b><br>2,000-3,000 employés,<br/>Services de développement logiciels"
+                },
+                {
+                    coords: [43.6045, 1.4524],
+                    info: "<b>DSI: Atos</b><br>Plusieurs centaines d'employés,<br/>Solutions en transformation digitale"
+                },
+                {
+                    coords: [43.6155, 1.3508],
+                    info: "<b>DSI: Sopra Steria</b><br>5,000-9,999 employés,<br/>Développement d’applications métiers"
+                },
+                {
+                    coords: [43.6293, 1.3800],
+                    info: "<b>DSI: Capgemini Engineering</b><br>2,000-3,000 employés,<br/>Ingénierie et innovation logicielle"
+                },
+                {
+                    coords: [43.6100, 1.4300],
+                    info: "<b>DSI: IBM</b><br>Plusieurs centaines d'employés,<br/>Développement IA et cloud"
+                },
+                {
+                    coords: [43.6108, 1.4340],
+                    info: "<b>DSI: CGI</b><br>Plusieurs centaines d'employés,<br/>Applications IT pour entreprises"
+                },
+                {
+                    coords: [43.6370, 1.3800],
+                    info: "<b>DSI: DSI (Distribution Services Industriels)</b><br>624 employés,<br/>Solutions ERP et logistique"
+                },
+                {
+                    coords: [43.6045, 1.4524],
+                    info: "<b>DSI: Orange</b><br>3,000-5,000 employés,<br/>Développement télécom et réseaux"
+                }
+            ];
+
+            var pointsPME = [
+                // PME
+                {
+                    coords: [43.6295, 1.4332],
+                    info: "<b>PME: JD SOLUTIONS</b><br>1-2 employés,<br/>Solutions informatiques et développement"
+                },
+                {
+                    coords: [43.5786, 1.4199],
+                    info: "<b>PME: VELA</b><br>15 employés,<br/>Services en bureautique et informatique"
+                },
+                {
+                    coords: [43.6000, 1.4333],
+                    info: "<b>PME: Bravas.io</b><br>10 employés,<br/>Développement web et solutions digitales"
+                },
+                {
+                    coords: [43.6600, 1.4300],
+                    info: "<b>PME: TGS France Informatique Toulouse</b><br>12 employés,<br/>Conseil et systèmes d'information"
+                }
+            ];
+
+
+            points.forEach(function (point) {
+                var customIcon = L.icon({
+                    iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+                    iconSize: [25, 41],
+                    iconAnchor: [12, 41],
+                    popupAnchor: [1, -34],
+                    shadowSize: [41, 41]
+                });
+                L.marker(point.coords, { icon: customIcon }).addTo(map)
+                    .bindPopup(point.info);
+            });
+            pointsDSI.forEach(function (point) {
+                // chanhe the hue of the marker
+                var customIcon = L.icon({
+                    iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+                    iconSize: [25, 41],
+                    iconAnchor: [12, 41],
+                    popupAnchor: [1, -34],
+                    shadowSize: [41, 41]
+                });
+                L.marker(point.coords, { icon: customIcon }).addTo(map)
+                    .bindPopup(point.info);
+
+            });
+            pointsPME.forEach(function (point) {
+                // chanhe the hue of the marker
+                var customIcon = L.icon({
+                    iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+                    iconSize: [25, 41],
+                    iconAnchor: [12, 41],
+                    popupAnchor: [1, -34],
+                    shadowSize: [41, 41]
+                });
+                L.marker(point.coords, { icon: customIcon }).addTo(map)
+                    .bindPopup(point.info);
+
+            });
+        });
+    </script>
+</body>
+
+</html>
